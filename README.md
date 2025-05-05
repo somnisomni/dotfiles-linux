@@ -1,6 +1,7 @@
 somni.dotfiles.linux
 ====================
-This repository contains my personal dotfiles and configuration files for Linux systems.
+This repository contains my personal dotfiles and configuration files for Linux systems.  
+*(especially for Arch Linux or Arch-based distributions)*
 
 Dotfiles are bootstrapped using [Dotbot](https://github.com/anishathalye/dotbot).
 
