@@ -6,6 +6,10 @@
 - clean: [ '~/' ]
 
 - link:
+    # Git
     ~/.gitignore: git/.gitignore
     ~/.gitconfig: git/.gitconfig
+
+    # ZSH
     ~/.zshrc: zsh/.zshrc
+    ~/.zprofile: zsh/.zprofile
