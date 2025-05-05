@@ -1,0 +1,20 @@
+# Ignore backup files
+*~
+*.bkup
+*.backup
+*.swp
+*.swap
+
+# Ignore auto generated files on macOS
+.DS_Store
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Ignore auto generated files on Windows
+Thumbs.db
+desktop.ini
+
+# Ignore auto generated files on Linux
+.directory
+.Trash-*
