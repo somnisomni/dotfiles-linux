@@ -1,3 +1,8 @@
-- default:
-  link:
-    relink: true
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.gitignore: git/.gitignore
+    ~/.gitconfig: git/.gitconfig

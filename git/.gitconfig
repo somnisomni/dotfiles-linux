@@ -1,0 +1,35 @@
+##### somni.dotfiles.linux #####
+## Global  Git Configurations ##
+
+# ** User information **
+[user]
+  name = somni
+  email = me@somni.one
+  signingKey = 782CAE24A5B51DE9
+
+# ** Core settings **
+[core]
+  excludesFile = ~/.gitignore
+  untrackedCache = true
+  ignoreCase = false
+  autoCrlf = input
+
+# ** Commit settings **
+[commit]
+  gpgSign = true
+
+# ** Repository initialization settings **
+[init]
+  defaultBranch = main
+
+# ** Pull settings **
+[pull]
+  rebase = true
+
+# ** Help function settings **
+[help]
+  autoCorrect = 1
+
+# ** CLI color settings **
+[color]
+  ui = auto
