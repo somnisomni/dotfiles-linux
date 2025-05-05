@@ -7,7 +7,13 @@ Dotfiles are bootstrapped using [Dotbot](https://github.com/anishathalye/dotbot)
 
 Bootstrap
 ---------
-To bootstrap the dotfiles, run the following command in the root of the repository:
+Make sure to have clone this repository with Dotbot submodule:
+
+```sh
+git clone --recurse-submodules
+```
+
+To bootstrap the dotfiles after clone, run the following command in the root of the repository:
 
 ```sh
 ./install
