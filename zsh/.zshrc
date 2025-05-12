@@ -18,19 +18,18 @@ HIST_STAMPS="yyyy-mm-dd"
 # Oh My Zsh plugins
 plugins=(git command-not-found nvm)
 
-# Finally load Oh My Zsh
-source $ZSH/oh-my-zsh.sh
-
-# ** ZSH settings **
-# ZSH cache directory
+# Oh My Zsh cache directory
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+# Finally load Oh My Zsh
+source $ZSH/oh-my-zsh.sh
+
 # ** Personal customizations **
-# Add $HOME/bin to the PATH
-export PATH=$HOME/bin:$PATH
+# Add local binary directories to the PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 # Set `nano` as default CLI editor
 export EDITOR="nano"
