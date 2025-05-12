@@ -1,3 +1,5 @@
+# See https://github.com/anishathalye/dotbot?tab=readme-ov-file#configuration for documentation
+
 - defaults:
     link:
       create: true
@@ -19,3 +21,37 @@
 
     # Aria2
     ~/.config/aria2/aria2.conf: aria2/aria2.conf
+
+- shell:
+    - description: "Install yay before installing other packages   "
+      command: "yes | sudo pacman -S --noconfirm yay"
+      stderr: true
+    - description: "Setting up yay   "
+      command: "yay -S --save --removemake --devel --editmenu --editor 'nano'"
+    - description: "Install core packages   "
+      command: "yes | yay -S --answerdiff None --noconfirm --sudoloop --removemake
+                git gnupg
+                nano
+                wget curl aria2
+                zsh oh-my-zsh-git
+                parted smartmontools dosfstools exfatprogs f2fs-tools ntfs-3g
+                gzip zstd unzip xz tar
+                neofetch
+                openssh"
+      stderr: true
+    - description: "Install fonts   "
+      command: "yes | yay -S --answerdiff None --noconfirm --sudoloop --removemake
+                otf-ibm-plex
+                noto-fonts-cjk otf-noto-sans-cjk-vf otf-noto-sans-mono-cjk-vf noto-fonts-emoji
+                otf-pretendard otf-pretendard-jp otf-pretendard-std
+                ttf-nanum ttf-d2coding
+                otf-kopub
+                ttf-koruri ttf-mplus-git"
+      stderr: true
+    - description: "Install development packages   "
+      command: "yes | yay -S --answerdiff None --noconfirm --sudoloop --removemake
+                github-cli
+                dotnet-sdk
+                nvm
+                python python-pip python-numpy python-yaml"
+      stderr: true
