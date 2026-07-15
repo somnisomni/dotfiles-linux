@@ -26,6 +26,10 @@
 [pull]
   rebase = true
 
+### ** Rebase settings **
+[rebase]
+  committerDateIsAuthorDate = true
+
 ### ** Help function settings **
 [help]
   autoCorrect = 1
