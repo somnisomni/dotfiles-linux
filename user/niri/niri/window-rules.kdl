@@ -3,9 +3,10 @@ window-rule {
   match app-id="org.kde.kdeconnect.app"                   // KDE Connect
   match app-id=r#"^[Pp]inentry"#                          // Pinentry
   match app-id=r#"^org.freedesktop.impl.portal.desktop"#  // XDG Desktop Portals
-  match app-id="steam"                                    // Steam
-  match app-id="unityhub"                                 // Unity Hub
+  match app-id="[Ss]team"                                 // Steam
+  match app-id="[Uu]nity[Hh]ub"                           // Unity Hub
   match app-id=r#"^[Bb]itwarden$"#                        // Bitwarden
+  match app-id="zenity"                                   // Zenity dialogs
 
   open-maximized false
   open-floating true
@@ -40,10 +41,12 @@ window-rule {
 
 // Bitwarden
 window-rule {
-  match app-id=r#"^[Bb]itwarden$"#
+  match app-id=r#"^[Bb]itwarden$"#   // Standalone
+  match title=r#"^[Bb]itwarden - "#  // Web browser extension
 
   block-out-from "screen-capture"
 
+  open-floating true
   default-floating-position x=20 y=20 relative-to="top-right"
   default-column-width { fixed 800; }
   default-window-height { fixed 1000; }
