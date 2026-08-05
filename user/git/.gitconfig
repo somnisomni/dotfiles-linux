@@ -5,7 +5,14 @@
 [user]
   name = somni
   email = me@somni.one
-  signingKey = 782CAE24A5B51DE9
+  signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICetppVkmlge5OJCIHx8rCueVkpBteCMSWqvmXMNhMvs
+
+### ** GPG settings **
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
 
 ### ** Core settings **
 [core]
@@ -52,7 +59,7 @@
 
 ### ** Git LFS **
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

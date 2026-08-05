@@ -25,6 +25,7 @@
     # Git
     ~/.gitignore: user/git/.gitignore
     ~/.gitconfig: user/git/.gitconfig
+    ~/.ssh/allowed_signers: user/git/allowed_signers
 
     # ZSH
     ~/.zshrc: user/zsh/.zshrc
