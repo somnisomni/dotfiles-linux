@@ -83,6 +83,16 @@ if [[ -f ~/.niri.zsh ]]; then
   source ~/.niri.zsh
 fi
 
+### ** PNPM global bin **
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+
+### ** Bitwarden SSH agent **
+export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
+
 ### ** Fastfetch on shell startup **
 # Execute `fastfetch` if installed
 if command -v fastfetch &> /dev/null; then
