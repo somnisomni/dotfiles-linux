@@ -40,4 +40,4 @@ The script provides some options(*'modules'*) for setting up the system, reducin
 
 It can be executed manually at [`./_scripts/setup/setup.sh`](_scripts/setup/setup.sh).
 
-`dialog` package is needed to make the script work, so install it before execute the script.
+`dialog` package is needed to make the script work, so install it before executing the script.
