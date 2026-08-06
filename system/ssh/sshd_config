@@ -1,0 +1,34 @@
+######### somni.dotfiles ########
+## SSH Configurations (System) ##
+
+# Include drop-in configurations
+Include /etc/ssh/sshd_config.d/*.conf
+
+# Custom SSH port
+Port 239
+
+# Don't allow root login
+PermitRootLogin no
+
+# Login settings
+LoginGraceTime 1m
+MaxAuthTries 3
+MaxSessions 3
+
+# Authentication
+PasswordAuthentication no
+PermitEmptyPasswords no
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+
+# Forwardings
+AllowTcpForwarding yes
+X11Forwarding no
+
+# Console
+PrintMotd no
+
+# Connection
+TCPKeepAlive yes
+Compression delayed
+VersionAddendum PlanaDaisuki

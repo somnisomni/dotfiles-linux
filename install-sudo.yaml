@@ -24,6 +24,10 @@
     # Nano
     /etc/nanorc: system/nano/nanorc
 
+    # SSH
+    /etc/ssh/sshd_config: system/ssh/sshd_config
+
+
     # ** Root user configurations
     # GTK/QT theme configs (for elevated applications)
     /root/.config/gtk-3.0/settings.ini: user/gtk-3.0/settings.ini

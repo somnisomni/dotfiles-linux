@@ -25,7 +25,6 @@
     # Git
     ~/.gitignore: user/git/.gitignore
     ~/.gitconfig: user/git/.gitconfig
-    ~/.ssh/allowed_signers: user/git/allowed_signers
 
     # ZSH
     ~/.zshrc: user/zsh/.zshrc
@@ -69,3 +68,7 @@
 
     # Fontconfig
     ~/.config/fontconfig: user/fontconfig
+
+- shell:
+    # Fix permission for user SSH directory
+    - command: "chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
